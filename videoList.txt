@@ -1,0 +1,47 @@
+  const videos = [
+    {
+      id: 1,
+      title: "1. Introduction to coding concept",
+      url: "https://www.youtube.com/embed/3w5r1xHnumc",
+    },
+    {
+      id: 2,
+      title: "2. All you need to know about HTML",
+      url: "https://www.youtube.com/embed/3pUAyhVJfQI",
+    },
+    {
+      id: 3,
+      title: "3. Creating tables in HTML",
+      url: "https://www.youtube.com/embed/Lb7ycDTM30g",
+    },
+    {
+      id: 4,
+      title: "4. Creating forms in HTML",
+      url: "https://www.youtube.com/embed/PMB7r1hJfms",
+    },
+    {
+      id: 5,
+      title: "5. Creating admission forms in HTML",
+      url: "https://www.youtube.com/embed/QTLdTnsV_a8",
+    },
+    {
+      id: 6,
+      title: "6. Environment variables react",
+      url: "https://www.youtube.com/embed/NIJJrL6KaQE",
+    },
+    {
+      id: 7,
+      title: "7. Text & Email Automations",
+      url: "https://www.youtube.com/embed/some_video_id_7",
+    },
+    {
+      id: 8,
+      title: "8. Completion & Testing",
+      url: "https://www.youtube.com/embed/some_video_id_8",
+    },
+    {
+      id: 9,
+      title: "EXTRA: HighLevel SAAS",
+      url: "https://www.youtube.com/embed/some_video_id_9",
+    },
+  ];
