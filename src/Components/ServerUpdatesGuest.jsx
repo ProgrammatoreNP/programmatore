@@ -23,7 +23,7 @@ const currentDate = new Date().toLocaleDateString("en-US", {
             {update.title}
           </h3>
           <p className="text-gray-600 mt-2">{update.description}</p>
-                  <p className="text-gray-400 text-sm mt-2">Posted on {currentDate} </p>
+                  <p className="text-white text-sm mt-2">Posted on {currentDate} </p>
         </div>
       ) : (
         <div className="text-gray-500 flex items-center space-x-2">

@@ -14,6 +14,7 @@ import CardDetails from './CardDetails.jsx'
 import { Auth0Provider } from "@auth0/auth0-react";
 import reactIcons from "https://cdn.jsdelivr.net/npm/react-icons@5.2.1/+esm";
 import PrivacyPolicy from './Pages/PrivacyPolicy.jsx'
+import VideoPageCss from "./Courses/VideoPageCss.jsx"
 
 
 
@@ -33,8 +34,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/docs" element={<Documentation />} />
-          <Route path="/videopage" element={<VideoPageHTML />} />
           <Route path="/free-courses" element={<FreeCourses />} />
+          <Route path="/free-courses/html" element={<VideoPageHTML />} />
+          <Route path="/free-courses/css" element={<VideoPageCss />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/card/:id" element={<CardDetails />} />
