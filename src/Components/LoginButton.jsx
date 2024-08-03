@@ -1,10 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
+
 
 const LoginButton = () => {
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
   const [showMenu, setShowMenu] = useState(false);
   const dropdownRef = useRef(null);
+    const navigate = useNavigate();
+
+    const handleRedirect = () => {
+      navigate("/login");
+    };
 
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -49,7 +56,7 @@ const LoginButton = () => {
       ) : (
         <button
           className="border border-[#a855f7] px-4 py-2 rounded-3xl bg-primary text-white transition-transform duration-300 hover:translate-y-[-3px] focus:outline-none focus:shadow-outline"
-          onClick={() => loginWithRedirect()}
+          onClick={() => handleRedirect()}
         >
           Log In
         </button>

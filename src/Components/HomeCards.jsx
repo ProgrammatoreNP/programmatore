@@ -12,7 +12,16 @@ const HomeCards = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div
+        className="flex items-center justify-center h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-primary motion-reduce:animate-[spin_1.5s_linear_infinite]"
+        role="status"
+      >
+        <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+          Loading...
+        </span>
+      </div>
+    );
   }
 
   return (
@@ -38,14 +47,13 @@ const HomeCards = () => {
               learning journey.
             </CardLink>
             <CardLink
-              to="/book-class"
+              to="/docs"
               bgColor="bg-yellow-100"
               hoverColor="bg-yellow-200"
               textColor="text-yellow-700"
-              title="Book a Class"
+              title="Read the Documentation"
             >
-              Click here to schedule your classes with us and choose a time that
-              works best for you
+              Click here to read the documentation of the website.
             </CardLink>
             <CardLink
               to="/paid-courses"

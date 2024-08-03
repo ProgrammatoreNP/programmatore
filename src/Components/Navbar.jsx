@@ -19,20 +19,20 @@ function Navbar() {
           </span>
         </div>
         <div className="hidden md:flex space-x-6">
-          <a href="#" className="text-gray-600 hover:text-gray-800">
+          <a href="/free-courses" className="text-gray-600 hover:text-gray-800">
             Tutorials
           </a>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
-            Exercises
+          <a href="/free-courses" className="text-gray-600 hover:text-gray-800">
+            Free
           </a>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
-            Services
+          <a href="/docs" className="text-gray-600 hover:text-gray-800">
+            Docs
           </a>
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
           <a href="#" className="text-blue-600">
-            Plus
+            ✨Premium
           </a>
           <LoginButton />
         </div>
