@@ -1,0 +1,14 @@
+.video-player {
+  position: relative;
+  border: 2px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-player .controls {
+  transition: opacity 0.3s;
+}
+
+.video-player:hover .controls {
+  opacity: 1;
+}

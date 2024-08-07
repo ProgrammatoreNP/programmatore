@@ -18,12 +18,12 @@ const currentDate = new Date().toLocaleDateString("en-US", {
         <button className="text-gray-900 font-medium">Server Board</button>
       </div>
       {hasUpdates ? (
-        <div className="bg-gray-50 p-4 rounded-lg shadow">
+        <div className="bg-gray-50 p-4 rounded-lg shadow transition-transform duration-500 hover:translate-y-[-5px] cursor-pointer">
           <h3 className="text-lg font-semibold text-gray-800">
             {update.title}
           </h3>
           <p className="text-gray-600 mt-2">{update.description}</p>
-                  <p className="text-white text-sm mt-2">Posted on {currentDate} </p>
+          <p className="text-white text-sm mt-2">Posted on {currentDate} </p>
         </div>
       ) : (
         <div className="text-gray-500 flex items-center space-x-2">

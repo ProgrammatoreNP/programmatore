@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../Components/Navbar";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const VideoPageHTML = () => {
   const videos = [
@@ -8,10 +9,10 @@ const VideoPageHTML = () => {
       title: "1. Introduction to coding concept",
       url: "https://www.youtube.com/embed/3w5r1xHnumc",
       actionItems: [
-        "Newsletter for important updates",
-        "Follow for exclusive content",
-        "Leave a testimonial",
-        "Reach your income goals faster & easier",
+        { text: "Newsletter for important updates", link: "/" },
+        { text: "Follow for exclusive content", link: "/" },
+        { text: "Leave a testimonial", link: "/" },
+        { text: "Reach your income goals faster & easier", link: "/" },
       ],
     },
     {
@@ -19,9 +20,15 @@ const VideoPageHTML = () => {
       title: "2. All you need to know about HTML",
       url: "https://www.youtube.com/embed/3pUAyhVJfQI",
       actionItems: [
-        "Join the HTML webinar",
-        "Download HTML cheat sheet",
-        "Check out the HTML resources",
+        { text: "Join the HTML webinar", link: "https://example.com/webinar" },
+        {
+          text: "Download HTML cheat sheet",
+          link: "https://example.com/cheatsheet",
+        },
+        {
+          text: "Check out the HTML resources",
+          link: "https://example.com/resources",
+        },
       ],
     },
     // Add other video objects similarly with different actionItems
@@ -144,8 +151,8 @@ const VideoPageHTML = () => {
                 <ul className="list-decimal ml-4 mt-2">
                   {actionItems.map((item, index) => (
                     <li key={index}>
-                      <a href="#" className="text-primary">
-                        {item}
+                      <a href={item.link} className="text-primary">
+                        {item.text}
                       </a>
                     </li>
                   ))}

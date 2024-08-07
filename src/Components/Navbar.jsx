@@ -19,11 +19,14 @@ function Navbar() {
           </span>
         </div>
         <div className="hidden md:flex space-x-6">
-          <a href="/free-courses" className="text-gray-600 hover:text-gray-800">
-            Tutorials
+          <a href="/home" className="text-gray-600 hover:text-gray-800">
+            Home
           </a>
           <a href="/free-courses" className="text-gray-600 hover:text-gray-800">
-            Free
+            Video
+          </a>
+          <a href="/free-courses" className="text-gray-600 hover:text-gray-800">
+            NonVideo
           </a>
           <a href="/docs" className="text-gray-600 hover:text-gray-800">
             Docs
