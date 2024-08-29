@@ -8,7 +8,6 @@ const validCredentials = [
   { email: "user3@example.com", passcode: "code3" },
   // Add more email-passcode pairs as needed
 ];
-
 const PremiumPage = () => {
   const [email, setEmail] = useState("");
   const [passcode, setPasscode] = useState("");
