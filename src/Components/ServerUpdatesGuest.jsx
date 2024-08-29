@@ -1,4 +1,6 @@
 import React from "react";
+import LoginButton from "./LoginButton"
+import { Link } from "react-router-dom";
 
 const ServerUpdatesGuest = () => {
   const hasUpdates = true; // Change this to a dynamic value based on your logic
@@ -7,24 +9,29 @@ const ServerUpdatesGuest = () => {
     description:
       "We recommend logging in to Programmatore for better use. You may proceed to using the website features once you log in.",
   };
-const currentDate = new Date().toLocaleDateString("en-US", {
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
+  const currentDate = new Date().toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <div className="bg-white p-6 rounded-lg shadow">
       <div className="border-b border-gray-200 pb-2 mb-4 flex space-x-8">
         <button className="text-gray-900 font-medium">Server Board</button>
       </div>
       {hasUpdates ? (
-        <div className="bg-gray-50 p-4 rounded-lg shadow transition-transform duration-500 hover:translate-y-[-5px] cursor-pointer">
-          <h3 className="text-lg font-semibold text-gray-800">
-            {update.title}
-          </h3>
-          <p className="text-gray-600 mt-2">{update.description}</p>
-          <p className="text-white text-sm mt-2">Posted on {currentDate} </p>
-        </div>
+        <Link to="/login">
+          <div className="bg-gray-50 p-4 rounded-lg shadow transition-transform duration-500 hover:translate-y-[-5px] cursor-pointer">
+            <h3 className="text-lg font-semibold text-gray-800">
+              {update.title}
+            </h3>
+            <p className="text-gray-600 mt-2">{update.description}</p>
+            <p className="text-gray-500 text-sm mt-2">
+              Posted on {currentDate}
+            </p>
+          </div>
+        </Link>
       ) : (
         <div className="text-gray-500 flex items-center space-x-2">
           <div className="text-gray-400">
@@ -51,3 +58,4 @@ const currentDate = new Date().toLocaleDateString("en-US", {
 };
 
 export default ServerUpdatesGuest;
+

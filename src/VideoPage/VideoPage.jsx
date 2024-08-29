@@ -11,7 +11,7 @@ const VideoPage = () => {
     html: [
       {
         id: 1,
-        title: "1. Starting with HTML",
+        title: "1. HTML for Starters",
         url: "https://www.youtube.com/embed/ICDCs-RID38",
         actionItems: [
           { text: "Newsletter for important updates", link: "#" },

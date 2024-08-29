@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import LoginButton from "./LoginButton";
-import "./Css/Navbar.css"
+import "./Css/Navbar.css";
+import "./ComponentsCSS/Navbar.css"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,17 +34,18 @@ function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
-          <a href="#" className="text-blue-600">
+          <a href="/premium" className="text-blue-600">
             ✨Premium
           </a>
           <LoginButton />
         </div>
         <div className="md:hidden flex items-center">
-          <button
-            onClick={toggleMenu}
-            className="text-gray-600 hover:text-gray-800 focus:outline-none"
-          >
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          <button onClick={toggleMenu} className="focus:outline-none">
+            <div className={`hamburger ${isOpen ? "open" : ""}`}>
+              <span className="block bg-gray-600 h-1 w-6 mb-1 transition-all duration-300"></span>
+              <span className="block bg-gray-600 h-1 w-6 mb-1 transition-all duration-300"></span>
+              <span className="block bg-gray-600 h-1 w-6 transition-all duration-300"></span>
+            </div>
           </button>
         </div>
       </div>
@@ -53,7 +54,7 @@ function Navbar() {
           isOpen ? "block" : "hidden"
         } md:hidden transition-all duration-300 ease-in-out`}
       >
-        <div className="px-3 pt-3 pb-3 space-y-1 sm:px-3">
+        <div className="flex flex-col items-center px-3 pt-3 pb-3 space-y-4">
           <a href="#" className="block text-gray-600 hover:text-gray-800">
             Tutorials
           </a>
